@@ -1,0 +1,40 @@
+    
+//LISTAR
+###
+GET http://localhost:1234/produto/listar
+
+//BUSCAR
+###
+GET http://localhost:1234/produto/buscar/369852147
+
+//ALTERAR pelo Codigo de Barras
+###
+GET http://localhost:1234/produto/alterar/12345
+
+//ALTERAR  pelo Documento
+###
+GET http://localhost:1234/produto/alterar
+content-type: application/json
+
+{
+    "nome": "Refri Alterado",
+    "codigoBarras": "369852147",
+    "preco": 13,
+    "criadoEm": "2020-10-01T23:21:06.849Z"
+}
+
+//REMOVER
+###
+DELETE http://localhost:1234/produto/remover/369852147
+//   http://localhost:1234/produto/remover/369852147
+
+//CADASTRAR
+###
+POST http://localhost:1234/produto/cadastrar
+content-type: application/json
+
+{
+    "nome": "Refrigerante",
+    "codigoBarras": "369852147",
+    "preco": 12
+}

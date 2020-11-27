@@ -1,0 +1,16 @@
+<table mat-table [(dataSource)]="productsTable" class="mat-elevation-z8">
+    <ng-container matColumnDef="codigoBarras">
+        <th mat-header-cell *matHeaderCellDef>Código de Barras</th>
+        <td mat-cell *matCellDef="let product">{{ product.codigoBarras }}</td>
+    </ng-container>
+    <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef>Nome</th>
+        <td mat-cell *matCellDef="let product">{{ product.nome }}</td>
+    </ng-container>
+    <ng-container matColumnDef="preco">
+        <th mat-header-cell *matHeaderCellDef>Preço</th>
+        <td mat-cell *matCellDef="let product">{{ product.preco }}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="productsColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: productsColumns"></tr>
+</table>
